@@ -1,0 +1,12 @@
+{
+  "name": "doodlemagic-skill-tree",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "YutaUra",
+  "license": "MIT",
+  "packageManager": "pnpm@8.15.6",
+  "dependencies": {},
+  "devDependencies": {}
+}
