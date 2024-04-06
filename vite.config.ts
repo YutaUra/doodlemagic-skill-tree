@@ -5,6 +5,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
 	plugins: [preact()],
+	base: "/doodlemagic-skill-tree/",
 	test: {
 		environment: "jsdom",
 	},
