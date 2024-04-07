@@ -14,6 +14,7 @@
 	"packageManager": "pnpm@8.15.6",
 	"dependencies": {
 		"@dagrejs/dagre": "1.1.1",
+		"@headlessui/react": "1.7.18",
 		"preact": "10.20.1",
 		"react": "npm:@preact/compat@17.1.2",
 		"react-dom": "npm:@preact/compat@17.1.2",

@@ -37,3 +37,9 @@
 .react-flow__node-skill {
   @include default();
 }
+
+.react-flow__node-skill-ref {
+  @include default();
+
+  border-style: dotted;
+}
