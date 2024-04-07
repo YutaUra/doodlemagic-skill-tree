@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  dagre:
-    specifier: 0.8.5
-    version: 0.8.5
+  '@dagrejs/dagre':
+    specifier: 1.1.1
+    version: 1.1.1
   preact:
     specifier: 10.20.1
     version: 10.20.1
@@ -17,12 +17,21 @@ dependencies:
   react-dom:
     specifier: npm:@preact/compat@17.1.2
     version: /@preact/compat@17.1.2(preact@10.20.1)
+  react-hotkeys-hook:
+    specifier: 4.5.0
+    version: 4.5.0(@preact/compat@17.1.2)(@preact/compat@17.1.2)
+  react-icons:
+    specifier: 5.0.1
+    version: 5.0.1(@preact/compat@17.1.2)
   reactflow:
     specifier: 11.11.0
     version: 11.11.0(@preact/compat@17.1.2)(@preact/compat@17.1.2)
   type-fest:
     specifier: 4.15.0
     version: 4.15.0
+  use-undo:
+    specifier: 1.1.1
+    version: 1.1.1(@preact/compat@17.1.2)(@preact/compat@17.1.2)
 
 devDependencies:
   '@biomejs/biome':
@@ -40,9 +49,6 @@ devDependencies:
   '@tsconfig/strictest':
     specifier: 2.0.5
     version: 2.0.5
-  '@types/dagre':
-    specifier: 0.7.52
-    version: 0.7.52
   husky:
     specifier: 9.0.11
     version: 9.0.11
@@ -447,6 +453,17 @@ packages:
     dependencies:
       postcss-selector-parser: 6.0.15
     dev: true
+
+  /@dagrejs/dagre@1.1.1:
+    resolution: {integrity: sha512-AQfT6pffEuPE32weFzhS/u3UpX+bRXUARIXL7UqLaxz497cN8pjuBlX6axO4IIECE2gBV8eLFQkGCtKX5sDaUA==}
+    dependencies:
+      '@dagrejs/graphlib': 2.2.1
+    dev: false
+
+  /@dagrejs/graphlib@2.2.1:
+    resolution: {integrity: sha512-xJsN1v6OAxXk6jmNdM+OS/bBE8nDCwM0yDNprXR18ZNatL6to9ggod9+l2XtiLhXfLm0NkE7+Er/cpdlM+SkUA==}
+    engines: {node: '>17.0.0'}
+    dev: false
 
   /@esbuild/aix-ppc64@0.20.2:
     resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
@@ -1430,10 +1447,6 @@ packages:
       '@types/d3-zoom': 3.0.8
     dev: false
 
-  /@types/dagre@0.7.52:
-    resolution: {integrity: sha512-XKJdy+OClLk3hketHi9Qg6gTfe1F3y+UFnHxKA2rn9Dw+oXa4Gb378Ztz9HlMgZKSxpPmn4BNVh9wgkpvrK1uw==}
-    dev: true
-
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
@@ -1953,13 +1966,6 @@ packages:
       d3-transition: 3.0.1(d3-selection@3.0.0)
     dev: false
 
-  /dagre@0.8.5:
-    resolution: {integrity: sha512-/aTqmnRta7x7MCCpExk7HQL2O4owCT2h8NT//9I1OQ9vt29Pa0BzSAkR5lwFUcQ7491yVi/3CXU9jQ5o0Mn2Sw==}
-    dependencies:
-      graphlib: 2.1.8
-      lodash: 4.17.21
-    dev: false
-
   /data-urls@5.0.0:
     resolution: {integrity: sha512-ZYP5VBHshaDAiVZxjbRVcFJpc+4xGgT0bK3vzy1HLN8jTO975HEbuYzZJcHoQEY5K1a0z8YayJkyVETa08eNTg==}
     engines: {node: '>=18'}
@@ -2353,12 +2359,6 @@ packages:
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: true
-
-  /graphlib@2.1.8:
-    resolution: {integrity: sha512-jcLLfkpoVGmH7/InMC/1hIvOPSUh38oJtGhvrOFGzioE1DZ+0YW16RgmOJhHiuWTvGiJQ9Z1Ik43JvkRPRvE+A==}
-    dependencies:
-      lodash: 4.17.21
-    dev: false
 
   /has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
@@ -2903,10 +2903,6 @@ packages:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
     dev: true
 
-  /lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: false
-
   /log-update@6.0.0:
     resolution: {integrity: sha512-niTvB4gqvtof056rRIrTZvjNYE4rCUzO6X/X+kYjd7WFxXeJ0NwEFnRxX6ehkvv3jTwrXnNdtAak5XYZuIyPFw==}
     engines: {node: '>=18'}
@@ -3401,6 +3397,24 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
+  /react-hotkeys-hook@4.5.0(@preact/compat@17.1.2)(@preact/compat@17.1.2):
+    resolution: {integrity: sha512-Samb85GSgAWFQNvVt3PS90LPPGSf9mkH/r4au81ZP1yOIFayLC3QAvqTgGtJ8YEDMXtPmaVBs6NgipHO6h4Mug==}
+    peerDependencies:
+      react: '>=16.8.1'
+      react-dom: '>=16.8.1'
+    dependencies:
+      react: /@preact/compat@17.1.2(preact@10.20.1)
+      react-dom: /@preact/compat@17.1.2(preact@10.20.1)
+    dev: false
+
+  /react-icons@5.0.1(@preact/compat@17.1.2):
+    resolution: {integrity: sha512-WqLZJ4bLzlhmsvme6iFdgO8gfZP17rfjYEJ2m9RsZjZ+cc4k1hTzknEz63YS1MeT50kVzoa1Nz36f4BEx+Wigw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: /@preact/compat@17.1.2(preact@10.20.1)
+    dev: false
+
   /react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: true
@@ -3868,6 +3882,16 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: /@preact/compat@17.1.2(preact@10.20.1)
+    dev: false
+
+  /use-undo@1.1.1(@preact/compat@17.1.2)(@preact/compat@17.1.2):
+    resolution: {integrity: sha512-2NNpJv7TDQpyETgRTG5I/CsABX5nhExpx8PEhWiDsnW9C5BA6Xnn8G9u/lPeg3+JsBrBtUx8/5bMbGmpnWz1Cw==}
+    peerDependencies:
+      react: '>=16.8.6'
+      react-dom: '>=16.8.6'
+    dependencies:
+      react: /@preact/compat@17.1.2(preact@10.20.1)
+      react-dom: /@preact/compat@17.1.2(preact@10.20.1)
     dev: false
 
   /util-deprecate@1.0.2:

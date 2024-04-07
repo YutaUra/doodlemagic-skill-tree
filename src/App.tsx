@@ -1,4 +1,5 @@
 import type { VNode } from "preact";
+import { HotkeysProvider } from "react-hotkeys-hook";
 import { css } from "~styled-system/css";
 import { SkillTree } from "./modules/skill-tree/SkillTree";
 
@@ -16,7 +17,9 @@ const Inner = () => {
 				flexDir: "column",
 			})}
 		>
-			<SkillTree className={css({ flexGrow: 1 })} />
+			<HotkeysProvider>
+				<SkillTree className={css({ flexGrow: 1 })} />
+			</HotkeysProvider>
 		</div>
 	);
 };

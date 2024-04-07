@@ -1,12 +1,13 @@
 import { Handle, type NodeProps, Position } from "reactflow";
-import "./RefNode.scss";
+import type { NodeData } from "../types/node-data";
+import { FoldIcon } from "./FoldIcon";
 
-export const RefNode = ({
-	data: { label },
+export const MagicRefNode = ({
+	data: { label, hasChildren, isFolded },
 	isConnectable,
 	targetPosition = Position.Top,
 	sourcePosition = Position.Bottom,
-}: NodeProps<{ label: string }>) => {
+}: NodeProps<NodeData>) => {
 	return (
 		<>
 			<Handle
@@ -15,6 +16,8 @@ export const RefNode = ({
 				isConnectable={isConnectable}
 			/>
 			{label}
+
+			{hasChildren && <FoldIcon isFolded={isFolded} />}
 			<Handle
 				type="source"
 				position={sourcePosition}

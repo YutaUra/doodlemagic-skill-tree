@@ -13,12 +13,15 @@
 	"license": "MIT",
 	"packageManager": "pnpm@8.15.6",
 	"dependencies": {
-		"dagre": "0.8.5",
+		"@dagrejs/dagre": "1.1.1",
 		"preact": "10.20.1",
 		"react": "npm:@preact/compat@17.1.2",
 		"react-dom": "npm:@preact/compat@17.1.2",
+		"react-hotkeys-hook": "4.5.0",
+		"react-icons": "5.0.1",
 		"reactflow": "11.11.0",
-		"type-fest": "4.15.0"
+		"type-fest": "4.15.0",
+		"use-undo": "1.1.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.4",
@@ -26,7 +29,6 @@
 		"@preact/preset-vite": "2.8.2",
 		"@testing-library/preact": "3.2.3",
 		"@tsconfig/strictest": "2.0.5",
-		"@types/dagre": "0.7.52",
 		"husky": "9.0.11",
 		"jsdom": "24.0.0",
 		"lint-staged": "15.2.2",
