@@ -1,5 +1,5 @@
 import type { VNode } from "preact";
-import { css } from "../styled-system/css";
+import { css } from "~styled-system/css";
 
 const Provider = ({ children }: { children: VNode }) => {
 	return <>{children}</>;

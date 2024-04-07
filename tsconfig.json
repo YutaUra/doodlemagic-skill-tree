@@ -6,7 +6,11 @@
 		"target": "ESNext",
 		"noEmit": true,
 		"jsx": "react-jsx",
-		"jsxImportSource": "preact"
+		"jsxImportSource": "preact",
+		"baseUrl": ".",
+		"paths": {
+			"~styled-system/*": ["styled-system/*"]
+		}
 	},
 	"include": ["src", "styled-system", "*.ts"]
 }
